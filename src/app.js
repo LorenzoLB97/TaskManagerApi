@@ -23,3 +23,9 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server attivo sulla porta ${PORT} 🚀`);
 });
+
+// Importa le route delle task
+const taskRoutes = require('./routes/taskRoutes');
+
+// Usa le route per le task
+app.use('/api', taskRoutes);
